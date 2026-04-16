@@ -245,21 +245,6 @@ img {
   background: var(--e-global-color-f53bb88);
 }
 
-.hero-photo-caption {
-  margin: var(--space-sm) 0 0;
-  font-size: 0.75rem;
-  line-height: 1.45;
-  color: var(--e-global-color-secondary);
-}
-
-.hero-photo-caption code {
-  font-size: 0.7rem;
-  padding: 0.1em 0.35em;
-  border-radius: 4px;
-  background: rgba(110, 193, 228, 0.2);
-  color: var(--e-global-color-1c66e5c);
-}
-
 .eyebrow {
   margin: 0 0 var(--space-sm);
   font-size: 0.8125rem;
@@ -276,10 +261,6 @@ img {
   letter-spacing: -0.03em;
   line-height: 1.12;
   color: var(--e-global-color-1c66e5c);
-}
-
-.name {
-  color: var(--e-global-color-7d68687);
 }
 
 .hero-lead {
@@ -358,7 +339,7 @@ img {
 }
 
 .section-title {
-  margin: 0 0 var(--space-lg);
+  margin: 0;
   font-size: clamp(1.35rem, 2.5vw, 1.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -366,6 +347,26 @@ img {
 
 .section-title--dark {
   color: var(--e-global-color-1c66e5c);
+}
+
+.wrap > .section-title {
+  margin: 0 0 var(--space-lg);
+}
+
+.wrap:has(> .section-lead) > .section-title {
+  margin-bottom: var(--space-md);
+}
+
+.section-lead {
+  margin: 0 0 var(--space-lg);
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--e-global-color-text);
+}
+
+.section-lead--on-dark {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 /* About */
@@ -377,14 +378,36 @@ img {
 
 @media (min-width: 45rem) {
   .about-grid {
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
     align-items: start;
+    gap: var(--space-xl);
   }
+}
+
+.about-main .prose + .prose {
+  margin-top: var(--space-md);
 }
 
 .prose {
   margin: 0;
   font-size: 1.0625rem;
+}
+
+.about-aside {
+  margin: 0;
+  padding: var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-sm);
+  background: rgba(2, 70, 85, 0.25);
+}
+
+.about-aside-title {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--e-global-color-primary);
 }
 
 .about-list {
@@ -397,13 +420,14 @@ img {
 }
 
 .section-alt .about-list {
-  border-left: 3px solid var(--e-global-color-primary);
-  padding-left: var(--space-md);
-  list-style: none;
+  border-left: none;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: rgba(255, 255, 255, 0.92);
 }
 
-.section-alt .about-list li::before {
-  content: "— ";
+.section-alt .about-list li::marker {
+  color: var(--e-global-color-primary);
 }
 
 /* Skills */

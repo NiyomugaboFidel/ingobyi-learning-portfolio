@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Junior software developer portfolio — projects, skills, and contact.">
-  <title>Fidele Niyomugabo | Junior Software Developer</title>
+  <meta name="description" content="Fidele Niyomugabo — junior software developer. Web fundamentals, APIs, and clean code. View projects and get in touch.">
+  <meta name="theme-color" content="#024655">
+  <meta name="author" content="Fidele Niyomugabo">
+  <meta property="og:title" content="Fidele Niyomugabo | Software Developer">
+  <meta property="og:description" content="Junior software developer focused on readable code, APIs, and continuous learning. Portfolio, skills, and contact.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en">
+  <title>Fidele Niyomugabo | Software Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -32,18 +38,18 @@
   </header>
 
   <main id="main">
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="hero-heading">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Junior software developer</p>
-          <h1 class="hero-title">Hi, I’m <span class="name">Fidele Niyomugabo</span></h1>
+          <p class="eyebrow">Software developer</p>
+          <h1 id="hero-heading" class="hero-title">Fidele Niyomugabo</h1>
           <p class="hero-lead">
-            I build clear, maintainable software and learn something new every sprint.
-            This site is plain HTML and CSS — fast, readable, and easy to extend.
+            I write software that is easy to read, test, and change. I work across the stack with a focus on
+            clear structure, solid Git habits, and APIs that behave predictably.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View work</a>
-            <a class="btn btn-outline" href="#contact">Get in touch</a>
+            <a class="btn btn-primary" href="#projects">See projects</a>
+            <a class="btn btn-outline" href="#contact">Contact</a>
           </div>
         </div>
         <figure class="hero-photo">
@@ -51,37 +57,47 @@
             src="images/profile-placeholder.svg"
             width="480"
             height="600"
-            alt="Fidele Niyomugabo"
+            alt="Portrait of Fidele Niyomugabo"
             loading="eager"
             decoding="async"
           >
-          <figcaption class="hero-photo-caption">Swap this file for your own photo (e.g. <code>profile.jpg</code> in the <code>images</code> folder).</figcaption>
         </figure>
       </div>
     </section>
 
-    <section id="about" class="section section-alt">
+    <section id="about" class="section section-alt" aria-labelledby="about-heading">
       <div class="wrap">
-        <h2 class="section-title">About</h2>
+        <h2 id="about-heading" class="section-title">About</h2>
         <div class="about-grid">
-          <p class="prose">
-            I’m a junior developer focused on writing code that teammates can understand and ship.
-            I care about version control, testing basics, and asking good questions early.
-            Currently deepening my skills in backend APIs and front-end fundamentals.
-          </p>
-          <ul class="about-list">
-            <li>Open to junior / graduate roles</li>
-            <li>Based in your city · Remote-friendly</li>
-            <li>Learning: system design basics, CI/CD</li>
-          </ul>
+          <div class="about-main">
+            <p class="prose">
+              I am a junior software developer who cares as much about how code is organized as about what it does.
+              I aim for small, focused changes, meaningful commit messages, and tests where they add real confidence.
+            </p>
+            <p class="prose">
+              Day to day I build with web fundamentals, work with data through SQL, and integrate or build REST APIs.
+              I am comfortable asking for review early, documenting decisions simply, and iterating based on feedback.
+            </p>
+          </div>
+          <aside class="about-aside" aria-label="At a glance">
+            <h3 class="about-aside-title">At a glance</h3>
+            <ul class="about-list">
+              <li>Open to junior and graduate software roles</li>
+              <li>Comfortable with remote collaboration and async communication</li>
+              <li>Currently strengthening system design and CI/CD workflows</li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section section-surface">
+    <section id="skills" class="section section-surface" aria-labelledby="skills-heading">
       <div class="wrap">
-        <h2 class="section-title section-title--dark">Skills</h2>
-        <ul class="skill-tags" aria-label="Technologies">
+        <h2 id="skills-heading" class="section-title section-title--dark">Skills</h2>
+        <p class="section-lead">
+          Tools and technologies I use regularly. The list grows as projects and roles require it.
+        </p>
+        <ul class="skill-tags" aria-label="Technologies and tools">
           <li>HTML &amp; CSS</li>
           <li>JavaScript</li>
           <li>Git</li>
@@ -89,48 +105,54 @@
           <li>REST APIs</li>
           <li>SQL</li>
           <li>Node.js</li>
-          <li>Testing</li>
+          <li>Automated testing</li>
         </ul>
       </div>
     </section>
 
-    <section id="projects" class="section section-alt">
+    <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
       <div class="wrap">
-        <h2 class="section-title">Projects</h2>
+        <h2 id="projects-heading" class="section-title">Projects</h2>
+        <p class="section-lead section-lead--on-dark">
+          Selected work that shows how I structure code, handle data, and ship small, complete features.
+        </p>
         <ul class="project-list">
           <li class="project-card">
             <h3 class="project-title">Task API</h3>
             <p class="project-desc">
-              REST API for tasks with CRUD routes, validation, and simple auth. Written to practice clean structure and error handling.
+              A REST API for managing tasks: CRUD endpoints, input validation, and lightweight authentication.
+              Built to practice predictable responses, error handling, and a tidy project layout.
             </p>
             <p class="project-meta">Python · Flask · SQLite</p>
-            <a class="text-link text-link--on-dark" href="#" rel="noopener noreferrer">View repository</a>
+            <a class="text-link text-link--on-dark" href="#" rel="noopener noreferrer">Source code</a>
           </li>
           <li class="project-card">
-            <h3 class="project-title">Portfolio site</h3>
+            <h3 class="project-title">This portfolio</h3>
             <p class="project-desc">
-              Static portfolio with semantic HTML, organized CSS, and minimal JavaScript for navigation. No build step required.
+              A static site with semantic HTML, modular CSS, and a small script for accessible navigation.
+              No build pipeline — easy to host and maintain.
             </p>
-            <p class="project-meta">HTML · CSS · JS</p>
-            <a class="text-link text-link--on-dark" href="#" rel="noopener noreferrer">View repository</a>
+            <p class="project-meta">HTML · CSS · JavaScript</p>
+            <a class="text-link text-link--on-dark" href="#" rel="noopener noreferrer">Source code</a>
           </li>
           <li class="project-card">
             <h3 class="project-title">CLI notes</h3>
             <p class="project-desc">
-              Small command-line tool to add and list notes in a local file. Practice with parsing arguments and file I/O.
+              A command-line utility to add and list notes in a local file. Focus on argument parsing, file I/O, and clear user feedback.
             </p>
             <p class="project-meta">Node.js</p>
-            <a class="text-link text-link--on-dark" href="#" rel="noopener noreferrer">View repository</a>
+            <a class="text-link text-link--on-dark" href="#" rel="noopener noreferrer">Source code</a>
           </li>
         </ul>
       </div>
     </section>
 
-    <section id="contact" class="section section-surface">
+    <section id="contact" class="section section-surface" aria-labelledby="contact-heading">
       <div class="wrap">
-        <h2 class="section-title section-title--dark">Contact</h2>
+        <h2 id="contact-heading" class="section-title section-title--dark">Contact</h2>
         <p class="contact-intro">
-          Prefer email for opportunities and collaboration. Response time is usually within a few days.
+          For hiring, collaborations, or questions about my work, email is the best way to reach me.
+          I typically reply within a few business days.
         </p>
         <ul class="contact-list">
           <li>
@@ -154,10 +176,10 @@
     <div class="wrap footer-top">
       <div class="footer-brand">
         <p class="footer-name">Fidele Niyomugabo</p>
-        <p class="footer-tagline">Junior software developer · Building reliable, readable code.</p>
+        <p class="footer-tagline">Software developer · Clear code, deliberate learning, reliable delivery.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <p class="footer-heading">Navigate</p>
+        <p class="footer-heading">On this page</p>
         <ul class="footer-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -166,7 +188,7 @@
         </ul>
       </nav>
       <div class="footer-contact">
-        <p class="footer-heading">Connect</p>
+        <p class="footer-heading">Links</p>
         <ul class="footer-links">
           <li><a href="mailto:hello@example.com">Email</a></li>
           <li><a href="https://github.com/" rel="noopener noreferrer">GitHub</a></li>
